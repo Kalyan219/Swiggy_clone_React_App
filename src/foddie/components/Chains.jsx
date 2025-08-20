@@ -2,7 +2,8 @@ import React,{useState, useEffect} from 'react';
 import { API_URL } from '../api';  
 import { FaRegArrowAltCircleRight } from "react-icons/fa"; 
 import { FaRegArrowAltCircleLeft } from "react-icons/fa";
-import { MagnifyingGlass } from 'react-loader-spinner';
+import { ClipLoader } from "react-spinners";
+
 
 const Chains = () => {
     const [vendorData, setVendorData] = useState([]);
@@ -52,16 +53,7 @@ const handleScroll = (direction) => {
           <div className="loader">
             Your 🥣 is Loading
           </div>
-           <MagnifyingGlass
-                visible={true}
-                height="80"
-                width="80"
-                ariaLabel="magnifying-glass-loading"
-                wrapperStyle={{}}
-                wrapperClass="Magnifying-glass-wrapper"
-                glassColor='#c0efff'
-                color='#e15b64'
-            />
+            <ClipLoader color="orange" size={50} />
         </>
            
         }
